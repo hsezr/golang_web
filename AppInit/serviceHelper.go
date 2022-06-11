@@ -15,8 +15,8 @@ type EncodeRequestFunc func(*gin.Context) (interface{}, error)
 //怎么处理业务结果
 type DecodeResponseFunc func(*gin.Context, interface{}) error
 
-func RegisterHandler(endpoint Endpoint, ) func(ctx *gin.Context) {
-
+func RegisterHandler(endpoint Endpoint, encodeFunc EncodeRequestFunc, decodeFunc DecodeResponseFunc) func(ctx *gin.Context) {
+	
 	return func(ctx *gin.Context) {
 
 	}
